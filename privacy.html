@@ -1,97 +1,34 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Política de Privacidad — Riot Friends (Discord Bot)</title>
-  <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;line-height:1.6;margin:0;background:#0b0f14;color:#e6edf3}
-    main{max-width:920px;margin:0 auto;padding:40px 20px}
-    h1,h2,h3{color:#cdd9e5;margin-top:1.8rem}
-    h1{font-size:1.8rem} h2{font-size:1.2rem;letter-spacing:.2px}
-    a{color:#7cc0ff;text-decoration:none} a:hover{text-decoration:underline}
-    code{background:#0f1720;border:1px solid #1f2937;border-radius:6px;padding:.1rem .3rem}
-    .muted{opacity:.8}
-    .card{background:#0f141b;border:1px solid #1f2a37;border-radius:12px;padding:18px}
-    footer{margin-top:3rem;border-top:1px solid #1f2a37;padding-top:1rem;font-size:.92rem}
-    ul{margin:0 0 1rem 1.25rem}
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de privacidad</title>
+  <link rel="icon" href="data:,">
+  <style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;line-height:1.6;margin:0;background:#0b0f17;color:#e6edf3} .wrap{max-width:860px;margin:0 auto;padding:48px 24px} h1{font-size:clamp(28px,4vw,40px)} a{color:#8ab4ff} code{background:#111827;border:1px solid #374151;border-radius:6px;padding:.1rem .3rem}</style>
 </head>
 <body>
-<main>
-  <h1>Política de Privacidad</h1>
-  <p class="muted">Última actualización: 20 de octubre de 2025</p>
-
-  <div class="card">
-    <p>Esta Política describe cómo <strong>Riot Friends</strong> (el “bot”) procesa datos dentro de Discord para ofrecer comandos slash, automatizaciones, roles autoasignables, voz temporal/personal, música (Lavalink) e IA local (Ollama). El bot opera en servidores de terceros (tu host/VPS). También aplican las <a href="https://discord.com/privacy" target="_blank" rel="noopener">políticas de Discord</a>.</p>
+  <div class="wrap">
+    <h1>Política de privacidad</h1>
+    <p>Esta política explica qué datos procesa el bot (“Servicio”) y con qué propósito.</p>
+    <h3>Datos que podemos procesar</h3>
+    <ul>
+      <li>Identificadores técnicos: IDs de servidor, canal, mensaje y usuario para operar comandos y automatizaciones.</li>
+      <li>Preferencias del servidor: configuraciones (p. ej., roles/IDs) almacenadas en archivos JSON o base de datos.</li>
+      <li>No almacenamos el contenido completo de mensajes salvo que lo configures explícitamente para funciones concretas (p. ej., tickets o logs).</li>
+    </ul>
+    <h3>Base legal y finalidad</h3>
+    <ul>
+      <li>Proveer funcionalidades del bot (moderación, música, roles, tickets, etc.).</li>
+      <li>Mejorar la estabilidad y seguridad mediante registros de errores.</li>
+    </ul>
+    <h3>Retención</h3>
+    <p>Conservamos datos mínimos el tiempo necesario para operar el Servicio y cumplir con requisitos legales o de moderación del servidor.</p>
+    <h3>Compartición</h3>
+    <p>No vendemos datos. Podemos usar proveedores de infraestructura (p. ej., hosting, GitHub Pages, proveedores de audio) para prestar el Servicio.</p>
+    <h3>Derechos</h3>
+    <p>Puedes solicitar eliminación de configuraciones asociadas a tu servidor. Contacto al email del administrador del bot.</p>
+    <p><a href="./">Volver al inicio</a></p>
   </div>
-
-  <h2>1) Qué datos procesamos</h2>
-  <ul>
-    <li><strong>Identificadores de Discord:</strong> IDs de usuario, servidor (guild), canal y roles; nombres para mostrar y <em>discriminator</em> cuando Discord los expone.</li>
-    <li><strong>Eventos y metadatos:</strong> uniones/salidas de miembros, cambios de roles (p. ej. Server Booster), mensajes en canales específicos para automatizaciones (p. ej. <code>#presentaciones</code> y el trigger “Down”).</li>
-    <li><strong>Contenido mínimo:</strong> leemos contenido de mensajes <em>solo</em> para automatizaciones (p. ej. detectar la palabra “Down”) y reaccionar; por diseño, no almacenamos cuerpo de mensajes salvo en registros de moderación si el staff lo habilita expresamente.</li>
-    <li><strong>Preferencias locales del bot:</strong> configuraciones (JSON) como listas de roles de color/iconos, paneles publicados, tickets, voz temporal/personal, y colas de música. Se guardan en archivos de datos del servidor (p. ej. carpeta <code>data/</code> del repositorio/despliegue).</li>
-    <li><strong>Logs técnicos:</strong> errores y eventos de ejecución para diagnóstico (incluyen IDs y nombres de comandos; no incluyen IPs de usuarios de Discord). Tu proveedor de hosting podría registrar IPs a nivel de servidor.</li>
-    <li><strong>IA (Ollama local):</strong> si habilitas respuestas automáticas, el texto del mensaje que dispara la acción se envía al proceso local de Ollama en el <em>mismo host</em>; no se remite a servicios en la nube por defecto.</li>
-  </ul>
-
-  <h2>2) Finalidades</h2>
-  <ul>
-    <li>Proveer funciones del bot: slash commands, self-roles, tickets, música, voz temporal/personal y automatizaciones.</li>
-    <li>Moderación: asignación de roles, aplicación de reglas (p. ej. “Down”), gestión de boosts y registros de incidencias si el staff lo activa.</li>
-    <li>Operación y seguridad: diagnóstico de errores, prevención de abuso, mejora de estabilidad.</li>
-  </ul>
-
-  <h2>3) Base legal</h2>
-  <p>Dependiendo de tu jurisdicción: interés legítimo en ofrecer y proteger el servicio del bot; cumplimiento del contrato (estos Términos) al usarlo; y consentimiento del servidor al invitar la app y configurar sus permisos.</p>
-
-  <h2>4) Conservación</h2>
-  <ul>
-    <li>Configuraciones (JSON) y estados (p. ej. paneles, roles, tickets): hasta que los admins los modifiquen o borren.</li>
-    <li>Registros de moderación (si existen): típicamente hasta <strong>180 días</strong> salvo política distinta del servidor.</li>
-    <li>Logs técnicos: rotados según configuración del host (p. ej. logs de Docker con límite por tamaño/número).</li>
-    <li>Contenido de mensajes: no se conserva de forma persistente salvo decisión explícita del staff (p. ej. auditoría).</li>
-  </ul>
-
-  <h2>5) Compartición y terceros</h2>
-  <ul>
-    <li>No vendemos datos de usuarios.</li>
-    <li>Compartimos datos con <strong>Discord</strong> (plataforma) y servicios necesarios:
-      <ul>
-        <li><strong>Lavalink</strong> (en tu propio contenedor/host) y plugins de fuentes (p. ej. YouTube), sujetos a sus términos.</li>
-        <li><strong>Ollama</strong> local (proceso en tu host) si está habilitado.</li>
-        <li>Proveedor de hosting (VPS) por razones operativas y de seguridad.</li>
-      </ul>
-    </li>
-  </ul>
-
-  <h2>6) Seguridad</h2>
-  <p>Aplicamos medidas razonables (separación por contenedores Docker, mínimos secretos en <code>.env</code>, políticas de permisos del bot, rotación de logs). Ningún sistema es 100% seguro; administra bien tus claves y permisos en Discord.</p>
-
-  <h2>7) Tus opciones y derechos</h2>
-  <ul>
-    <li>Puedes retirar permisos o expulsar el bot del servidor en cualquier momento.</li>
-    <li>Para solicitar acceso o eliminación de datos relacionados con el bot en tu servidor, contacta a los administradores locales o escribe a <strong>contacto@tudominio.com</strong>. Si el servidor usa tickets, abre uno (p. ej. en <code>#tickets</code>).</li>
-    <li>Si tu legislación (p. ej. GDPR/LPDP) otorga derechos adicionales, respetaremos las solicitudes razonables a través de los contactos indicados.</li>
-  </ul>
-
-  <h2>8) Menores</h2>
-  <p>El bot está destinado a usuarios que cumplen los requisitos de edad de Discord. No recopilamos conscientemente datos de menores por fuera de la plataforma. Si crees que tratamos datos de un menor de forma inadecuada, contáctanos para removerlos.</p>
-
-  <h2>9) Transferencias internacionales</h2>
-  <p>Según dónde alojes el bot (tu VPS), los datos pueden procesarse fuera de tu país. Discord y servicios asociados pueden operar globalmente.</p>
-
-  <h2>10) Cambios</h2>
-  <p>Podremos actualizar esta Política. Publicaremos la fecha de la última actualización arriba. El uso continuado implica aceptación.</p>
-
-  <h2>11) Contacto</h2>
-  <p>Consultas de privacidad: <strong>contacto@tudominio.com</strong> o abre un ticket en el servidor.</p>
-
-  <footer>
-    <p class="muted">© <span id="y"></span> Riot Friends — Discord Bot</p>
-  </footer>
-</main>
-<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
